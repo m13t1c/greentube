@@ -5,7 +5,7 @@ services:
     ports:
       - '8080:8080'
       - '50000:50000'
-    image: jenkins-master:v0.2
+    image: jenkins-master:v0.3
   jenkins-slave:
     container_name: jenkins-slave
     restart: always
