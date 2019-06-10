@@ -18,10 +18,10 @@
   - prepare greentube_app_multibranch-pipeline job 
   - bring up jenkins-master/slave with docker-compose using docker-compose.ci.yml
 
-#### There is some manual steps, mostly beceause of security 
-#### Please consider to fulfil them before continue furter
-### - e-mail user pass for jenkins mail send configuration; 
-### - docker Hub login need to be done on jenkins-slave instance initialy)
+### There is some manual steps, mostly beceause of security 
+### Please consider to fulfil them before continue furter
+#### - e-mail user pass for jenkins mail send configuration; 
+#### - docker Hub login need to be done on jenkins-slave instance initialy)
 
 ### jenkins creds
 - user: jenkins
