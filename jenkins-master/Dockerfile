@@ -1,6 +1,6 @@
 FROM jenkins/jenkins:lts
 
-RUN /usr/local/bin/install-plugins.sh git mstest matrix-auth workflow-aggregator docker-workflow blueocean credentials-binding
+RUN /usr/local/bin/install-plugins.sh git mstest matrix-auth workflow-aggregator docker-workflow blueocean credentials-binding maven email-ext
 
 ENV JENKINS_USER jenkins
 ENV JENKINS_PASS jenkins
