@@ -46,6 +46,7 @@ fi
 
 
 mkdir -p ~/jenkins-{master,slave}_home
+cp -R ./jobs/* ~/jenkins-master_home/jobs/
 
 docker-compose -f ./docker-compose.ci.yml up &
 
