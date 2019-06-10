@@ -9,15 +9,14 @@
   - build jenkins-slave server based on public "ubuntu:16.04"
   - tag it as stable localy, if build succesed (jenkins-slave:stable)
   - output log file in current directory
+  - prepare greentube_app_multibranch-pipeline job 
+  - bring up jenkins-master/slave with docker-compose using docker-compose.ci.yml
 
+#### There is some manual steps, mostly beceause of security (e-mail user pass for jenkins mail send configuraiont; docker Hub login need to be done on jenkins-slave instance initialy)
 
 ### jenkins creds
 - user: jenkins
 - pass: jenkins
-
-### how to start scritp
-
-### docker hub login
 
 ### mailsetup
 
@@ -26,11 +25,24 @@
 
 - SMTP server: 
 - Use SMTP Authentication 
-  - User name:
-  - Password:
+  - User name: noreply@yourdomain.com
+  - Password: ************
 
 3.  Test configuration by sending test e-mail
   - Test e-mail recipient
     - Test configuration button
 
+### docker hub
+- CONTAINER_ID=`docker ps | grep jenkins-slave | awk '{print $1}'`
+- docker exec -ti ${CONTAINER_ID} /bin/bash
+  - docker login
+    - Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
+      - Username: your_docker_hub_user
+      - Password: ********************
+    - WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
+    Configure a credential helper to remove this warning. See
+    https://docs.docker.com/engine/reference/commandline/login/#credentials-store
 
+    Login Succeeded
+
+   
