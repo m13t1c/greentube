@@ -6,6 +6,7 @@
 
 ### how to start scritp
 
+### docker hub login
 
 ### mailsetup
 
