@@ -36,15 +36,17 @@
 ```
 CONTAINER_ID=`docker ps | grep jenkins-slave | awk '{print $1}'`
 docker exec -ti ${CONTAINER_ID} /bin/bash
+```
 
-  - docker login
-    - Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
-      - Username: your_docker_hub_user
-      - Password: ********************
-    - WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
-    Configure a credential helper to remove this warning. See
-    https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+- docker login
+```
+Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
+Username: your_docker_hub_user
+Password: ********************
+WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
 
-    Login Succeeded
+Login Succeeded
 ```
    
