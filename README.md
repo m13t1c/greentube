@@ -1,6 +1,14 @@
-jenkins creds
-how to start scritp
-#mailsetup
+
+
+### jenkins creds
+user: jenkins
+pass: jenkins
+
+### how to start scritp
+
+
+### mailsetup
+
 Manage Jenkins -> Configure System -> E-mail Notification
 Click on Advance button as well to get other important option
 
