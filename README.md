@@ -1,18 +1,26 @@
 ### SETUP Jenkins multibranch pipeline
 1. As normal user (!root) launch setup.sh script.
-2. setup.sh will do:
-  - check if docker cli installed
-  - check if user not root
+```
+./setup.sh
+```
+
+2. setup.sh will:
+  - check if docker cli installed, exit if not
+  - check if user not root, exit if is
   - build jenkins-master server from public "jenkins/jenkins:lts"
-  - tag it as stable localy, if build succesed (jenkins-master:stable)
-  - output log file in current directory
+    - tag it as stable localy, if build succesed (jenkins-master:stable)
+    - output log file in current directory
+
   - build jenkins-slave server based on public "ubuntu:16.04"
-  - tag it as stable localy, if build succesed (jenkins-slave:stable)
-  - output log file in current directory
+    - tag it as stable localy, if build succesed (jenkins-slave:stable)
+    - output log file in current directory
+
   - prepare greentube_app_multibranch-pipeline job 
   - bring up jenkins-master/slave with docker-compose using docker-compose.ci.yml
 
-#### There is some manual steps, mostly beceause of security (e-mail user pass for jenkins mail send configuraiont; docker Hub login need to be done on jenkins-slave instance initialy)
+#### There is some manual steps, mostly beceause of security 
+#### Please consider to fulfil them before continue furter
+####(e-mail user pass for jenkins mail send configuraiont; docker Hub login need to be done on jenkins-slave instance initialy)
 
 ### jenkins creds
 - user: jenkins
