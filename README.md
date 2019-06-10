@@ -33,8 +33,10 @@
     - Test configuration button
 
 ### docker hub
-- CONTAINER_ID=`docker ps | grep jenkins-slave | awk '{print $1}'`
-- docker exec -ti ${CONTAINER_ID} /bin/bash
+```
+CONTAINER_ID=`docker ps | grep jenkins-slave | awk '{print $1}'`
+docker exec -ti ${CONTAINER_ID} /bin/bash
+
   - docker login
     - Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
       - Username: your_docker_hub_user
@@ -44,5 +46,5 @@
     https://docs.docker.com/engine/reference/commandline/login/#credentials-store
 
     Login Succeeded
-
+```
    
