@@ -5,17 +5,17 @@ services:
     ports:
       - '8080:8080'
       - '50000:50000'
-    image: jenkins-master:v0.5
+    image: jenkins-master:stable
     volumes:
-      - /home/deploy/jenkins_var:/var/jenkins_home
+      - ~/jenkins-master_home:/var/jenkins_home
   jenkins-slave:
     container_name: jenkins-slave
     restart: always
     environment:
       - 'JENKINS_URL=http://jenkins-master:8080'
-    image: jenkins-slave:v0.1
+    image: jenkins-slave:stable
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - /home/deploy/jenkins_storage:/home/jenkins
+      - ~/jenkins-slave_home:/home/jenkins
     depends_on:
       - jenkins-master
