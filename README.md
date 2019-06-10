@@ -1,8 +1,8 @@
 
 
 ### jenkins creds
-user: jenkins
-pass: jenkins
+- user: jenkins
+- pass: jenkins
 
 ### how to start scritp
 
