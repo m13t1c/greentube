@@ -20,7 +20,8 @@
 
 #### There is some manual steps, mostly beceause of security 
 #### Please consider to fulfil them before continue furter
-####(e-mail user pass for jenkins mail send configuraiont; docker Hub login need to be done on jenkins-slave instance initialy)
+### - e-mail user pass for jenkins mail send configuration; 
+### - docker Hub login need to be done on jenkins-slave instance initialy)
 
 ### jenkins creds
 - user: jenkins
