@@ -28,7 +28,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     ports:
-      - 8080:80
+      - 8090:80
     networks:
       - web
     deploy:
